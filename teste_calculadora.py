@@ -29,10 +29,16 @@ def divisao():
 
 
 def multiplicacao():
-    print(1*1)
-    pass
-
-
+    total = 1
+    num = 1
+    while num != '=':
+        num = input('Número: ')
+        if num != '=':
+            total *= num
+        continue
+    
+    print(total)
+        
 # Função de decisão da operação
 def decisao(opcao):
     if opcao == '+':
@@ -48,7 +54,7 @@ def decisao(opcao):
 
 # Função inicial por onde começa o srcipt
 def main():
-    operador = str(input('Digite o operador: '))
+    operador = input('Digite o operador: ').strip()
     # Verificação do operador
     if (operador != '+' and operador != '-' and operador != '*' and operador != '/'):
         print('Operador inválido.')
