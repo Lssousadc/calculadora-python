@@ -6,7 +6,6 @@
 # mult = 1
 # div = 1
 
-
 def soma():
     total = 0
     num = 0
