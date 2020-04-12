@@ -19,20 +19,36 @@ def soma():
 
 
 def subtracao():
-    print(1-1)
-    pass
-
+    total = 0
+    num = 0
+    while num != '=':
+        num = input('Digite um número: ')
+        if num != '=':
+            total -= float(num)
+        continue
+    print(total)
 
 def divisao():
-    print(1/1)
-    pass
-
+    total = 1
+    num = 1
+    while num != '=':
+        num = input('Digite um número: ')
+        if num != '=':
+            total = total/float(num)
+        continue
+    print(total)
 
 def multiplicacao():
-    print(1*1)
-    pass
-
-
+    total = 1
+    num = 1
+    while num != '=':
+        num = input('Número: ')
+        if num != '=':
+            total *= num
+        continue
+    
+    print(total)
+        
 # Função de decisão da operação
 def decisao(opcao):
     if opcao == '+':
@@ -48,7 +64,7 @@ def decisao(opcao):
 
 # Função inicial por onde começa o srcipt
 def main():
-    operador = str(input('Digite o operador: '))
+    operador = input('Digite o operador: ').strip()
     # Verificação do operador
     if (operador != '+' and operador != '-' and operador != '*' and operador != '/'):
         print('Operador inválido.')
